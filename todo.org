@@ -1,0 +1,3 @@
+* TODO need to find simple deployment process
+* TODO move all static files (like fonts, styles, scripts, etc.) under version control
+* TODO use any assets building tool
