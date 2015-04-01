@@ -1,11 +1,14 @@
+./.cabal-sandbox:
+	cabal sandbox init
+
 ./dist/build/site/site: deps
 	cabal configure && cabal build
 
-deps:
+deps: ./.cabal-sandbox
 	cabal install --only-dependencies
 
 clean:
-	./dist/build/site/site clean && rm -r ./dist ./site.o ./site.hi
+	./dist/build/site/site clean && rm -r ./dist ./site.o ./site.hi ./.cabal-sandbox
 
 watch: ./dist/build/site/site
 	./site watch
