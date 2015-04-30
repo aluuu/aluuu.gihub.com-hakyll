@@ -1,18 +1,23 @@
+BUILD_DIR = ./dist/build/site
+
 ./.cabal-sandbox:
 	cabal sandbox init
 
-./dist/build/site/site: deps
+$(BUILD_DIR)/site: deps
 	cabal configure && cabal build
 
 deps: ./.cabal-sandbox
 	cabal install --only-dependencies
 
 clean:
-	./dist/build/site/site clean && rm -r ./dist ./site.o ./site.hi ./.cabal-sandbox
+	$(BUILD_DIR)/site clean && rm -r $(BUILD_DIR)
 
-watch: ./dist/build/site/site
-	./site watch
+watch: $(BUILD_DIR)/site
+	$(BUILD_DIR)/site watch
+
+build: $(BUILD_DIR)/site
+	$(BUILD_DIR)/site build
 
 .PHONY: clean watch deps
 
-.DEFAULT_GOAL: ./dist/build/site/site
+.DEFAULT_GOAL: $(BUILD_DIR)/site

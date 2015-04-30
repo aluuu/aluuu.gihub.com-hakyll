@@ -2,6 +2,9 @@
 import Data.Monoid (mappend)
 import Hakyll
 
+lastNPosts n pattern=
+    fmap (take n) $ loadAll pattern >>= recentFirst
+
 matchPosts lang =
     match pattern $ do
       route $ setExtension "html"
@@ -47,7 +50,11 @@ main = hakyll $ do
     match "index.html" $ do
         route idRoute
         compile $ do
+            ru_posts <- lastNPosts 5 "posts/ru/*"
+            en_posts <- lastNPosts 5 "posts/en/*"
             let indexCtx =
+                    listField "ru_posts" postCtx (return ru_posts) `mappend`
+                    listField "en_posts" postCtx (return en_posts) `mappend`
                     constField "title" "Home" `mappend`
                     defaultContext
             getResourceBody

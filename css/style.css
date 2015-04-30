@@ -1,0 +1,12 @@
+* {font-family: serif, 'PT Serif';}
+h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {font-family: sans, 'PT Sans';}
+code, pre{font-family: monospace;}
+blockquote{border-left: 4px solid #DDD; padding: 0 15px;}
+p{text-indent:1em;}
+.text-center{text-align:center;}
+.date{font-family: sans, 'PT Sans'; margin-right:5px;}
+.post-list{list-style-type: none; padding-left:0;}
+.post-list li a{font-size:1.1em;}
+.post .header{clear:both;overflow:hidden;}
+.post .header .date{float:right}
+.post .header h2{float:left}
