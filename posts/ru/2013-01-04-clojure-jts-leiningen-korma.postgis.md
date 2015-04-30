@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Clojure, JTS, Leiningen и korma.postgis"
+title: Clojure, JTS, Leiningen и korma.postgis
 tags: ["clojure", "lein", "jts"]
 ---
 

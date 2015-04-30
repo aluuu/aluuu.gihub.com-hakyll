@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Создание боксов для Vagrant"
+title: Создание боксов для Vagrant
 tags: ["chef", "veewee", "vagrant", "ruby"]
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Расстояние Левенштейна"
+title: Расстояние Левенштейна
 tags: ["clojure", "math", "fp"]
 ---
 
