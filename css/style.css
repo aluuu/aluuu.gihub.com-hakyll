@@ -1,12 +1,85 @@
-* {font-family: serif, 'PT Serif';}
-h1,h2,h3,h4,h5,h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a {font-family: sans, 'PT Sans';}
-code, pre{font-family: monospace;}
-blockquote{border-left: 4px solid #DDD; padding: 0 15px;}
-p{text-indent:1em;}
-.text-center{text-align:center;}
-.date{font-family: sans, 'PT Sans'; margin-right:5px;}
-.post-list{list-style-type: none; padding-left:0;}
-.post-list li a{font-size:1.1em;}
-.post .header{clear:both;overflow:hidden;}
-.post .header .date{float:right}
-.post .header h2{float:left}
+a, a:visited { color: #008ECC; }
+a:hover { color: #00B2FF; }
+
+body {
+    min-width: 600px;
+    margin: 0 auto;
+    font-size: 1.125em;
+    line-height: 1.444444444em;
+    max-width: 760px;
+    margin: 0 auto;
+}
+header > nav > ul {padding-left:0;}
+header > nav > ul > li {
+    display:inline-block;
+    margin: 0 20px 0 0;
+}
+h1 {
+    font-size: 4.222222222em;
+    line-height: 1.026315789em;
+    margin-top: 0.68421053em;
+    margin-bottom: 0.34210526em;
+}
+h2 {
+    font-size: 2.611111111em;
+    line-height: 1.106382978em;
+    margin-top: 1.10638298em;
+    margin-bottom: 0.55319149em;
+}
+h3 {
+    font-size: 1.611111111em;
+    line-height: 1.793103448em;
+    margin-top: 0.89655172em;
+    margin-bottom: 0.89655172em;
+}
+h4 {
+    font-size: 1em;
+    line-height: 1.444444444em;
+    margin-top: 1.44444444em;
+    margin-bottom: 1.44444444em;
+}
+
+p, ul, ol, pre, table, blockquote {
+    margin-top: 1.44444444em;
+    margin-bottom: 1.44444444em;
+}
+
+hr {
+    border: 1px solid;
+    margin: -1px 0;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+b, strong, em, small, code {
+    line-height: 1;
+}
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub {
+    top: 0.4em;
+}
+blockquote{
+    margin: 20px 0px;
+    margin-left: 1.5rem;
+    border-left: 5px solid #00B2FF;
+}
+h3 > small {
+    font-size: 0.5em;
+    font-weight:normal;
+}
+section > nav > ul {padding-left:0;}
+section > nav > ul > li {
+    list-style: none;
+}
+p{text-indent: 1.5rem;}
+pre{
+    margin: 20px 0px;
+    padding-left: 1.5rem;
+    border-left: 5px solid #00B2FF;
+}
