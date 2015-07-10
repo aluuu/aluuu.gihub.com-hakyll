@@ -39,4 +39,10 @@ main = hakyll $ do
                 >>= loadAndApplyTemplate "templates/default.html" indexCtx
                 >>= relativizeUrls
 
+    match "pages/*" $ do
+        route $ setExtension "html"
+        compile $ pandocCompiler
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
+
     match "templates/*" $ compile templateCompiler
