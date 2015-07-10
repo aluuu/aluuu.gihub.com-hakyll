@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Alexander Dinu</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="alternate" type="application/atom+xml" href="../../atom.xml" title="Бложик">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/typeplate.css">
+    <link rel="stylesheet" href="../../css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../">Последнее</a></li>
+          <li><a href="https://twitter.com/aluuu">Твиттер</a></li>
+          <li><a href="https://github.com/aluuu">Гитхаб</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article>
+  <h3>Создание боксов для Vagrant <small>11.01.2013 <a href="../../posts/ru/2013-01-11-vagrant-boxes.html">#</a></small></h3>
+  <p>Ох, и замотал меня этот ваш Vagrant. Скачаешь один бокс — Ruby старый, скачаешь другой бокс — chef не заводится.</p>
+<p>Мне порядком поднадоело, что с chef’ом у меня ничего не растёт, поэтому нашёл хороший туториал, для деревьев вроде меня, на тему «<a href="http://nepalonrails.com/post/13197838780/build-your-own-vagrant-box-ready-to-use-with-chef-solo">Как собрать свой Vagrant box и не обосраться</a>».</p>
+<p>О результатах трепыханий раскажу позже.</p>
+<hr>
+<p><strong>UPD</strong>: всё делаем по вышеназванному туториалу. Получаем работающую VM. Чтобы получить вожделенный *.box делаем</p>
+<pre><code class="bash">
+bundle exec vagrant basebox export 'box-name'
+</code></pre>
+<p>Опосля, в директории, где наш Vagrantfile лежит делаем:</p>
+<pre><code class="bash">
+vagrant box add box-name /path/to/box-name.box
+vagrant up
+</code></pre>
+<p>Теперь можно улыбаться.</p>
+<hr>
+<p><strong>UPD2</strong>: если что-то забыли сделать или накосячили в настройке коробки после её экспорта:</p>
+<pre><code class="bash">
+cd /path/to/veewee
+bundle exec vagrant basebox up 'box-name'
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 7222 -l vagrant 127.0.0.1
+</code></pre>
+<p>и опять</p>
+<pre><code class="bash">
+bundle exec vagrant basebox export 'box-name'
+</code></pre>
+</article>
+
+    </section>
+  </body>
+</html>

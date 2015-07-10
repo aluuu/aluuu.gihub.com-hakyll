@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Alexander Dinu</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="alternate" type="application/atom+xml" href="../../atom.xml" title="Бложик">
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../css/typeplate.css">
+    <link rel="stylesheet" href="../../css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../../">Последнее</a></li>
+          <li><a href="https://twitter.com/aluuu">Твиттер</a></li>
+          <li><a href="https://github.com/aluuu">Гитхаб</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <article>
+  <h3>Резво рисуем эллипс <small>23.02.2013 <a href="../../posts/ru/2013-02-23-ellipse.html">#</a></small></h3>
+  <p>Таки замутил ОЧЕ резвую функцию построения эллипсов.</p>
+<p>Результат на моём скромном ноуте:</p>
+<pre><code class="clojure">(time (construct-ellipse 25 5 2 90
+                         :step 0.1
+                         :angle 10))
+"Elapsed time: 0.250204 msecs"
+
+(time (construct-ellipse 25 5 2 90
+                         :step 0.001
+                         :angle 10))
+"Elapsed time: 1.043827 msecs"
+</code></pre>
+<p>Исходник <a href="https://gist.github.com/aluuu/5019152">здесь</a>.</p>
+</article>
+
+    </section>
+  </body>
+</html>
